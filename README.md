@@ -1,4 +1,4 @@
-<h1 align="center">Tampermonkey Lower Higher Game Hack</h1>
+<h1 align="center">Tampermonkey Higher Lower Game Hack</h1>
 
 <p align="center">A cheat for higher lower game.</p>
 
