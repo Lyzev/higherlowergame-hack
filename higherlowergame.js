@@ -49,7 +49,7 @@
     }
     function search(data, a) {
         for (let i = 0; i < data.length; i++) {
-            if (a === data[i].keyword) {
+            if (a.toUpperCase() === data[i].keyword.toUpperCase()) {
                 return data[i].searchVolume
             }
         }
