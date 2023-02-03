@@ -1,9 +1,9 @@
 <h1 align="center">Tampermonkey Higher Lower Game Hack</h1>
 
-<p align="center">A cheat for higher lower game.</p>
+<p align="center">Proof-Of-Concept for a cheat for higher lower game.</p>
 
 <div align="center">
-    <a href="https://discord.gg/5UmsQP4MFH"><img src="https://img.shields.io/discord/610120595765723137?logo=discord" alt="Discord"/></a>
+    <a href="https://discord.gg/Wfc3U8Dgn7"><img src="https://img.shields.io/discord/610120595765723137?logo=discord" alt="Discord"/></a>
     <br><br>
     <img src="https://img.shields.io/github/last-commit/Lyzev/HigherLowerGameHack" alt="GitHub last commit"/>
     <img src="https://img.shields.io/github/commit-activity/w/Lyzev/HigherLowerGameHack" alt="GitHub commit activity"/>
@@ -18,12 +18,12 @@ Please note, this repository is for educational and proof of concept purposes on
 ## Usage
 
 ### Install
-1. Download the higherlowergame.js file
+1. Download the [higherlowergame.js](https://github.com/Lyzev/higherlowergame-hack/releases/tag/v1.1) file
 2. Open Tampermonkey in your Browser
 3. Go to the Utilities tab
-4. Press the button 'Choose File' at 'Import from file'
-5. Choose the downloaded higherlowergame.js file
-6. Click on install in the tab that has opened
+4. Press the button `Choose File` at `Import from file`
+5. Choose the downloaded file
+6. Click on `Install` in the tab that has opened
 7. Have fun!
 
 ### Configuration
