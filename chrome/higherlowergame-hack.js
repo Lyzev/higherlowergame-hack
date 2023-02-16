@@ -75,7 +75,7 @@ function startAutoMode() {
                     } else {
                         clearInterval(play)
                     }
-                }, result["Delay"])
+                }, parseInt(result["Delay"]))
             } else {
                 running = false
             }
