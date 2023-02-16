@@ -41,8 +41,6 @@ Please note, this repository is for educational and proof of concept purposes on
 7. Have fun!
 
 ### Configuration
-The delay can be changed in the source code of the cheat, just open the installed script in Tampermonkey and change the value of the variable delay.
-
 ``NOTE: The delay is in Milliseconds. If you don't understand how to change it, just leave it to the default.``
 
 ## Bugs and Suggestions
