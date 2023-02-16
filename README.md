@@ -1,3 +1,7 @@
+<p align="center">
+    <img height="128" src=".idea/icon.png" alt="Icon of HigherLowerGame-Hack">
+</p>
+
 <h1 align="center">HigherLowerGame-Hack</h1>
 
 <p align="center">Proof-Of-Concept for a cheat for higher lower game.</p>
