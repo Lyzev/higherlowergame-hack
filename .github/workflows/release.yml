@@ -1,0 +1,48 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Revised edition or updated version of the repository to be published.
+        required: true
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Release Script
+        run: |
+          echo "Running shell script with version: ${{ github.event.inputs.version }}"
+          mkdir build
+          
+          sed -i "s/\${version}/${{ github.event.inputs.version }}/" ./chrome/manifest.json
+          sed -i "s/\${version}/${{ github.event.inputs.version }}/" ./tampermonkey/higherlowergame-hack.js
+          
+          zip -r ./build/higherlowergame-hack.zip ./chrome
+          cp ./tampermonkey/higherlowergame-hack.js ./build/higherlowergame-hack.js
+          for asset in ./build/*; do
+            md5sum $asset >> $asset.md5
+            sha1sum $asset >> $asset.sha1
+            sha256sum $asset >> $asset.sha256
+            sha512sum $asset >> $asset.sha512
+          done
+      - name: Create a new release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: CHANGELOG.md
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          tag_name: v${{ github.event.inputs.version }}
+          files: |
+            ./build/higherlowergame-hack.zip
+            ./build/higherlowergame-hack.zip.md5
+            ./build/higherlowergame-hack.zip.sha1
+            ./build/higherlowergame-hack.zip.sha256
+            ./build/higherlowergame-hack.zip.sha512
+            ./build/higherlowergame-hack.js
+            ./build/higherlowergame-hack.js.md5
+            ./build/higherlowergame-hack.js.sha1
+            ./build/higherlowergame-hack.js.sha256
+            ./build/higherlowergame-hack.js.sha512

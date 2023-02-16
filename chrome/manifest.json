@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "HigherLowerGame-Hack",
+  "version": "${version}",
+  "description": "Proof-Of-Concept for a cheat for higher lower game.",
+  "icons": {
+    "16": "img/icon-16x16.png",
+    "48": "img/icon-48x48.png",
+    "128": "img/icon-128x128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "img/icon-16x16.png",
+      "48": "img/icon-48x48.png",
+      "128": "img/icon-128x128.png"
+    },
+    "default_title": "HigherLowerGame-Hack",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.higherlowergame.com/"
+      ],
+      "js": [
+        "higherlowergame-hack.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}

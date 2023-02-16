@@ -1,0 +1,37 @@
+body {
+    background-color: #333;
+    color: #fff;
+    width: fit-content;
+}
+
+.setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+    width: 100px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+a:hover {
+    text-shadow: 0 0 1rem #fff;
+}
