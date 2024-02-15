@@ -4,7 +4,7 @@
 // @version      ${version}
 // @description  Proof-Of-Concept for a cheat for higher lower game.
 // @author       Lyzev
-// @match        http://www.higherlowergame.com/
+// @match        *://www.higherlowergame.com/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=higherlowergame.com
 // @require      https://openuserjs.org/src/libs/sizzle/GM_config.js
 // @grant        GM_getValue
@@ -83,7 +83,7 @@ const loop = setInterval(() => {
 
 function setup() {
     const request = new XMLHttpRequest()
-    request.open("GET", "http://www.higherlowergame.com/questions/get/general", false)
+    request.open("GET", "//www.higherlowergame.com/questions/get/general", false)
     request.send()
     const data = JSON.parse(request.responseText)
     for (let i = 0; i < data.length; i++) {
