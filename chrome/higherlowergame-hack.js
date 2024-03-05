@@ -15,7 +15,7 @@ const loop = setInterval(() => {
 
 function setup() {
     const request = new XMLHttpRequest()
-    request.open("GET", "http://www.higherlowergame.com/questions/get/general", false)
+    request.open("GET", "//www.higherlowergame.com/questions/get/general", false)
     request.send()
     const data = JSON.parse(request.responseText)
     for (let i = 0; i < data.length; i++) {
